@@ -90,7 +90,7 @@ function Header() {
                         },
                         {
                           id: 2,
-                          trigger: () => navigate('/galeria'),
+                          trigger: () => navigate('/details'),
                           component: <DropdownItem 
                             text="Meus Dados" 
                             edit=""
