@@ -1,4 +1,3 @@
-// Header.js
 import logo from '/logo.svg';
 import avatar from '/avatar.png';
 import { AnimatedLink } from './components/AnimatedLink';
@@ -62,7 +61,8 @@ function Header() {
           aria-label="Voltar à página inicial do Grupo Escoteiro Terra Da Saudade"
           onClick={() => handleNavigate('/')}
         >
-          <img className="w-24 h-24" src={logo} alt="Árvore com um machado cravado no meio dela, diversos galhos e folhas." />
+          <img className="w-24 h-24" src={logo} 
+          alt="Árvore com um machado cravado no meio dela, diversos galhos e folhas." />
           <figcaption className="text-left max-w-44">
             Grupo <strong className="text-social-brand">Escoteiro</strong> Terra Da Saudade - 05/SP
           </figcaption>
@@ -71,24 +71,24 @@ function Header() {
           <ul className="flex items-center gap-4">
             <li>
               <AnimatedLink 
-              text="Home"
-               to="/" 
-               isActive={activeRoute === '/'} 
-               onClick={() => handleNavigate('/')} />
+                text="Home"
+                to="/" 
+                isActive={activeRoute === '/'} 
+                onClick={() => handleNavigate('/')} />
             </li>
             <li>
               <AnimatedLink 
-              to="/ramos" 
-              text="Ramos" 
-              isActive={activeRoute === '/ramos'} 
-              onClick={() => handleNavigate('/ramos')} />
+                to="/ramos" 
+                text="Ramos" 
+                isActive={activeRoute === '/ramos'} 
+                onClick={() => handleNavigate('/ramos')} />
             </li>
             <li>
               <AnimatedLink 
-              to="/galeria" 
-              text="Galeria" 
-              isActive={activeRoute === '/galeria'} 
-              onClick={() => handleNavigate('/galeria')} />
+                to="/galeria" 
+                text="Galeria" 
+                isActive={activeRoute === '/galeria'} 
+                onClick={() => handleNavigate('/galeria')} />
             </li>
             <li className="relative">
               {currentUser ? (
@@ -96,7 +96,8 @@ function Header() {
                   <div className="flex justify-center">
                     <img
                       className={`w-12 h-12 rounded-full object-cover cursor-pointer transition duration-500 
-                        ${(isOpen || dropdownRoutes.includes(activeRoute)) ? 'brightness-150 border-2 border-green-600' : 'hover:brightness-150'}
+                        ${(isOpen || dropdownRoutes.includes(activeRoute)) ?
+                           'brightness-150 border-2 border-green-600' : 'hover:brightness-150'}
                       `}
                       src={avatar}
                       alt="Profile"
@@ -119,9 +120,9 @@ function Header() {
                 </>
               ) : (
                 <AnimatedLink to="/autenticacao/login"
-                 text="Login" 
-                 isActive={activeRoute === '/autenticacao/login'} 
-                 onClick={() => handleNavigate('/autenticacao/login')} />
+                  text="Login" 
+                  isActive={activeRoute === '/autenticacao/login'} 
+                  onClick={() => handleNavigate('/autenticacao/login')} />
               )}
             </li>
           </ul>
