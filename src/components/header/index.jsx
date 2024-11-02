@@ -8,7 +8,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { LogOut, Settings, ShieldAlert, Star, LockKeyhole } from 'lucide-react';
 import { signOutAsync } from '../../services/firebase/auth';
 import { toast } from 'sonner';
-import { DropdownItem } from './components/DropdownItem';
+import { DropdownItem } from '/components/dropdownItem';
 
 function Header() {
   const { currentUser } = getAuth();
