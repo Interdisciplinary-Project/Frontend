@@ -7,8 +7,8 @@ const INSTAGRAM_URL = 'https://instagram.com/grupoescoteiroterradasaudade?igshid
 function SideContact() {
   return (
     <ul
-      className="fixed left-2 md:top-1/2 -translate-y-1/3 flex flex-col gap-y-2
-                 bottom-0 md:bottom-auto">
+      className="fixed left-2 md:top-1/2 lg:-translate-y-1 md:-translate-y-1/3 flex flex-col gap-y-2
+                 bottom-0 md:bottom-auto -translate-y-[105px]">
       <li
         aria-label="WhatsApp"
         title="WhatsApp"
