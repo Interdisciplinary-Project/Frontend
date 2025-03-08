@@ -27,4 +27,4 @@ jobs:
       - name: make deploy
         run: npm run deploy
         env: 
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT   }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
