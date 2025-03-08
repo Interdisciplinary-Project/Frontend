@@ -125,7 +125,6 @@ function OurHistory() {
                    md:bg-light-social-brand md:dark:bg-dark-social-background md:pt-12 md:pb-28
                    bg-light-social-brand pt-12 pb-16"
     >
-      <p>ryan</p>
       <div
         className="lg:max-w-[1024px] lg:mx-auto
                    md:max-w-[620px] md:mx-auto
