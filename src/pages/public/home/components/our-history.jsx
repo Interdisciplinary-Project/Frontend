@@ -120,7 +120,7 @@ function OurHistory() {
 
   return (
     <section
-      className="lg:bg-light-social-brand dark:bg-dark-social-background dark:text-dark-social-white 
+      className="lg:bg-light-social-brand dark:bg-dark-social-background dark:text-dark-social-white
                   lg:pt-12 lg:pb-28
                    md:bg-light-social-brand md:dark:bg-dark-social-background md:pt-12 md:pb-28
                    bg-light-social-brand pt-12 pb-16"
@@ -160,6 +160,7 @@ function OurHistory() {
                 alt={selectedImage.title}
                 aria-describedby={selectedImage.date}
                 draggable={false}
+                loading='lazy'
               />
             </AnimatePresence>
             <div

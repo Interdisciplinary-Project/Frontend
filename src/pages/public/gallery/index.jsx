@@ -58,6 +58,7 @@ function Gallery() {
                   <img
                     src={image.url}
                     alt={image.alt}
+                    loading='lazy'
                     className="w-full h-full object-cover shadow-default transition duration-500 hover:scale-105
                     dark:shadow-dark-social-white"
                   />
