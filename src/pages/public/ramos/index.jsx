@@ -5,9 +5,21 @@ import { useEffect, useState } from 'react';
 import { Modal } from '../../../components/modal';
 import { PageTransition } from '../../../components/page-transition';
 import { useTranslation } from 'react-i18next';
+import { httpClient } from '../../../infra/httpClient';
+import { toast } from 'sonner';
 
 function Ramos() {
   const [openLobinho, setOpenLobinho] = useState(false);
+  const [ramos, setRamos] = useState([]);
+
+  useEffect(() => {
+    httpClient.get('/Branch')
+      .then((ramos) => setRamos(ramos))
+      .catch((e) => {
+        toast.error('Houve um problema ao buscar as informações dos ramos.');
+        console.error(e);
+      });
+  });
 
   const { t } = useTranslation();
 
@@ -70,7 +82,9 @@ function Ramos() {
               <span className="text-social-brand pr-2">
                 {t('ramos.spanLobinho')}
               </span>
-              {t('ramos.contentLobinho')}
+              {
+                ramos.length > 0 ? ramos[0].description : t('ramos.contentLobinho')
+              }
               <button
                 onClick={handleModalOpenLobinho}
                 className="text-social-brand flex py-10 transition duration-500 hover:brightness-50"
@@ -105,7 +119,9 @@ function Ramos() {
               <span className="text-social-brand pr-2">
                 {t('ramos.spanJunior')}
               </span>
-              {t('ramos.contentJunior')}
+              {
+                ramos.length > 0 ? ramos[1].description : t('ramos.contentJunior')
+              }
               <button
                 onClick={handleModalOpenJunior}
                 className="text-social-brand flex py-10 transition duration-500 hover:brightness-50"
